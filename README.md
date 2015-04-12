@@ -20,8 +20,8 @@ Then add **hubot-enhance** to your `external-scripts.json`:
 
 ## Configuration
 
-`HUBOT_IMGUR_CLIENT_ID`: *Required*. The client ID of your Imgur app. Used to upload enhanced images.
-`HUBOT_SLACK_TOKEN`: *Optional*. Used to query chat history to get the last posted image.
+`HUBOT_IMGUR_CLIENT_ID`: **Required**. The client ID of your Imgur app. Used to upload enhanced images.
+`HUBOT_SLACK_TOKEN`: **Optional**. Used to query chat history to get the last posted image.
 
 ## Example Interactions
 
