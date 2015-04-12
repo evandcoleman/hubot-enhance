@@ -1,0 +1,25 @@
+{
+  "name": "hubot-enhance",
+  "description": "A hubot script that enhances images",
+  "version": "0.0.1",
+  "author": "Evan Coleman <e@edc.me>",
+  "license": "MIT",
+  "keywords": "hubot, hubot-scripts, enhance",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edc1591/hubot-enhance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edc1591/hubot-enhance/issues"
+  },
+  "dependencies": {
+    "gm": "~1.17.0",
+    "request": "~2.55.1"
+  },
+  "peerDependencies": {
+    "hubot": "2.x"
+  },
+  "devDependencies": {},
+  "main": "src/enhance.coffee",
+  "scripts": {}
+}
