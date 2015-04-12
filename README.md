@@ -31,3 +31,8 @@ Then add **hubot-enhance** to your `external-scripts.json`:
 `user> hubot enhance 25 50`: Enhances the last posted image four times using a box hald the width and height of the original centered at a point 25% in from the left and 50% down from the top.
 
 `user> hubot enhance 25 50 http://some.image.com/image.jpg`: Does the same thing as the above command but uses the specified image instead.
+
+## TODO
+
+* Support fetching the latest image on platforms other than Slack
+* Better error handling
