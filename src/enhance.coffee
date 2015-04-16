@@ -68,15 +68,15 @@ fetchLatestImage = (msg, cb) ->
       channelId = item.id for item in channelsResp.channels when item.name == msg.message.room
       request.get "https://slack.com/api/channels.history?token="+process.env.HUBOT_SLACK_TOKEN+"&channel="+channelId, (err, resp, body) ->
         history = JSON.parse body
-        attachment = null
         for item in history.messages
           if item.attachments and item.attachments.length > 0 and item.attachments[0].image_url
             attachment = item.attachments[0]
-            break
-        if attachment == null
-          msg.reply "Couldn't find any images."
-          return
-        cb attachment.image_url, attachment.image_width, attachment.image_height
+            cb item.attachments[0].image_url, item.attachments[0].image_width, item.attachments[0].image_height
+            return
+          else if item.file and item.file.url
+            getDimensions item.file.url, (w, h) ->
+              cb item.file.url, w, h
+        msg.reply "Couldn't find any images."
   else
     msg.reply "You must specify an image URL."
     cb null, 0, 0
